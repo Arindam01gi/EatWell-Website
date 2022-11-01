@@ -9,6 +9,7 @@
   "author": "Arindam Maiti",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
     "node": "^19.0.0"
   },
