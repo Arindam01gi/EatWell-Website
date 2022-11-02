@@ -22,12 +22,13 @@ app.get('/restaurants',function(req,res){
     const filePath =path.join(__dirname ,'data','restaurents.json');
     const fileData=  fs.readFileSync(filePath);
     const storeRestaurants = JSON.parse(fileData);
-    res.render('restaurants',{numberOfRestaurants :storeRestaurants.length})
+    res.render('restaurants',{
+        numberOfRestaurants :storeRestaurants.length,
+        restaurants: storeRestaurants})
 })
 
 app.get('/recommend',function(req,res){
-    // htmlFilePath = path.join(__dirname , 'views','recommend.html')
-    // res.sendFile(htmlFilePath);
+  
     res.render('recommend')
 });
 
@@ -43,15 +44,13 @@ res.redirect('/confirm');
 });
 
 app.get('/about',function(req,res){
-    // htmlFilePath = path.join(__dirname , 'views','about.html')
-    // res.sendFile(htmlFilePath);
+    
     res.render('about')
     
 })
 
 app.get('/confirm',function(req,res){
-    // htmlFilePath = path.join(__dirname , 'views','confirm.html')
-    // res.sendFile(htmlFilePath);
+   
     res.render('confirm');
 })
 
