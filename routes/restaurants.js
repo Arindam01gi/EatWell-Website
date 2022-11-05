@@ -23,8 +23,6 @@ router.get('/restaurants/:id',function(req,res){
     return res.status().render('404');
   
 })
-
-
 router.get('/recommend',function(req,res){
   
     res.render('recommend')
